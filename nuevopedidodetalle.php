@@ -5,7 +5,7 @@
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         
         <meta name="author" content="Frabis"/>
-        <meta name="Description" content="Descripción"/>
+        <meta name="Description" content="Descripcion"/>
 
         <!-- En caso que tengas Favicon -->
         <!-- <link href="favicon.ico" type="image/x-icon" rel="shortcut icon"/> -->
@@ -23,7 +23,7 @@
 	</head>
 	<body class="menu-activo">
 	<?php
-		// Como comentario, el session_start() tiene que ir SI o SI antes de cualquier etiqueta HTML de la página.
+		// Como comentario, el session_start() tiene que ir SI o SI antes de cualquier etiqueta HTML de la pagina.
   		// session_start();
 	?>
 		
@@ -36,11 +36,11 @@
 
 			<nav class="menu cf">
 				
-				<!-- <h2>Menú</h2> -->
+				<!-- <h2>Menu</h2> -->
 
 				<ul>
 					<li><a href="home.php">Inicio </a></li>
-					<li><a href="nuevopedido.php">Nuevo Pedido de revisión</a></li>
+					<li><a href="nuevopedido.php">Nuevo Pedido de revision</a></li>
 
 					<?php //if (! empty($_SESSION['usuario'])) { ?>
 
@@ -49,7 +49,7 @@
 					<li><a href="altacliente.php">Alta de cliente</a></li>
 					<li><a href="modificarcliente.php">Modificar cliente</a></li>
 					<li><a href="bajacliente.php">Baja de cliente</a></li>
-					<li><a href="busquedaparticular.php">Realizar búsqueda particular</a></li>
+					<li><a href="busquedaparticular.php">Realizar busqueda particular</a></li>
 					<li><a href="buscarinformesdiarios.php">Buscar informes diarios</a></li>
 
 					<!--<li><a href="catalogo1.php">Realizar Pedido!</a></li>-->
@@ -78,12 +78,12 @@
 				<div class="principal">					
 					<form name="alta" method="post"action="">  
 						<fieldset id="registro">  
-							<legend>Registrar pedido de revisión</legend>   
+							<legend>Registrar pedido de revision</legend>   
 								<label for="dniocuit">DNI o CUIT </label></td><br> <td><input name="dniocuit" type="text" id="dniocuit" size="120" value="32123456" Readonly></td><br> 
 								<label for="fechapedido">Fecha: </label></td><br><td><input name="fechapedido" type="text" id="fechapedido" size="30" /></td>  
-								<br><label for="ubicacion">Ubicación: </label></td><br><td><input name="ubicacion" type="text" id="ubicacion" size="120" /></td>  <br>
-								<label for="observaciones">Observaciones </label></td> <br><td><textarea name="observaciones" rows="10" cols="40" id="observaciones" font="Times New Roman" placeholder="Datos que complementen la información anterior"></textarea></td><br><br>
-								<label for="numero">Número de pedido: </label></td><br><td><input name="numero" type="text" id="numero" size="20" value="158224" Readonly /></td><br><br>
+								<br><label for="ubicacion">Ubicacion: </label></td><br><td><input name="ubicacion" type="text" id="ubicacion" size="120" /></td>  <br>
+								<label for="observaciones">Observaciones </label></td> <br><td><textarea name="observaciones" rows="10" cols="40" id="observaciones" font="Times New Roman" placeholder="Datos que complementen la informacion anterior"></textarea></td><br><br>
+								<label for="numero">Numero de pedido: </label></td><br><td><input name="numero" type="text" id="numero" size="20" value="158224" Readonly /></td><br><br>
 								<td class="submit"></td><td><input type="submit" value="Registrar" /></td>
 						</fieldset>  
 					</form>
@@ -91,7 +91,7 @@
 			</section>
 
 			<footer>	
-				<p> Pie de página | <a href="mailto:info@irmin.com">info@irmin.com</a>  </p>
+				<p> Pie de pagina | <a href="mailto:info@irmin.com">info@irmin.com</a>  </p>
 			</footer>
 
 		</div>  

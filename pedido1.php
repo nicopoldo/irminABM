@@ -1,183 +1,191 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>..:: IRMIN ::.. --Buscar pedidos sin evaluar </title>
-<link rel="stylesheet" rev="stylesheet" type="text/css" href="hoja1.css"  />
-
-<style rel="stylesheet" rev="stylesheet" type="text/css">
-
-/* Contenedor general del visor */
-.contenedorvisor {
-position: relative;
-width: 500px;
-height: 460px;
-margin: 0 auto;
-text-align:center;
-overflow: hidden;
-}
-.contenedorvisor a {
-display: inline;
-text-decoration: none;
-top: 50px;
-}
-/* Estilo miniaturas */
-.miniatura {
-width: 18%; /* 100/nºimágenes, 5 en el ejemplo */
-margin:1px;
-border: 3px solid black;
-opacity: 1;
-}
-/* Estilo imagen principal */
-.grande {
-width:100%;
-position: absolute;
-top: 800px; /* Valor mayor que alto contenedor para ocultar todas las imágenes */
-margin:0 auto;
-text-align: center;
-display: block;
--webkit-transition: top 1s ease;
--moz-transition: top 1s ease;
--o-transition: top 1s ease;
--ms-transition: top 1s ease;
-transition: top 1s ease;
-}
-/* Relleno inicial del espacio para imagen principal */
-.muestra {
-opacity: .3;
-width: 200%;
-top: 100px;
-}
-/* Marcamos con un borde la miniatura seleccionada */
-a:hover .miniatura {
-border: 3px solid grey;
-opacity: .5;
-}
-/* Movemos con transición la imagen seleccionada a la zona visible */
-a:hover .grande {
-top: 100px;
--webkit-transition: top 1s ease;
--moz-transition: top 1s ease;
--o-transition: top 1s ease;
--ms-transition: top 1s ease;
-transition: top 1s ease;
-z-index:3;
-}
-
-
-
-</style>
-
-</head>
-
-<body>
-<?php
-/*
-  session_start(); 
-*/
-?>
-<div class="cabecera">
-  <p class="parrafo">
-  <h1 class="titulopripal"> IRMIN </h1>
-  </p>
-</div>
-  
-  <div class="centro">
-  
-    
-    <div class="principal">
-
-		<form name="mostrar" method="post" action="evaluarpedido.php">  
-			<fieldset id="imagenes">  
-				<legend>Pedidos sin evaluar</legend>   
-					<div class="contenedorvisor">
-						<a href="javascript:void(0);">
-							<img class="miniatura" src="imagenes/topes150128.1738.jpg" />
-							<img class="grande" src="imagenes/topes150128.1738.jpg" />
-						</a>
-						<a href="javascript:void(0);">
-							<img class="miniatura" src="imagenes/topes150128.1838.jpg" />
-							<img class="grande" src="imagenes/topes150128.1838.jpg" />
-						</a>
-						<a href="javascript:void(0);">
-							<img class="miniatura" src="imagenes/topes150128.1938.jpg" />
-							<img class="grande" src="imagenes/topes150128.1938.jpg" />
-						</a>
-						<!-- Se pueden agregar tantas como queramos
-						<a href="javascript:void(0);">
-							<img class="miniatura" src="URL_IMAGEN_MIN4" />
-							<img class="grande" src="URL_IMAGEN_ORIG4" />
-						</a>
-						<a href="javascript:void(0);">
-							<img class="miniatura" src="URL_IMAGEN_MIN5" />
-							<img class="grande" src="URL_IMAGEN_ORIG5" />
-						</a>
-						-->
-						<a href="javascript:void(0);">
-						<img class="grande muestra" src="/imagenes/topes150128.1738.jpg" />
-						</a>
-					</div>
-			</fieldset>
-			<td class="submit"></td><td><input type="submit" value="Evaluar" /></td>  
-		</form>
-	</div>
-	
-   	<div class="menu">
-		<p class="parrafom">
-		<h2 class="titulomenu">Menú</h2>
-		
-		<ul class="listao">
-		<li><a href="home.php">Inicio </a></li>
-		<li><a href="nuevopedido.php">Nuevo Pedido de revisión</a></li>
-		
-		
-		<?php
-		/*
-		if (! empty($_SESSION['usuario']))
-		{
-		*/
-		?>
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        <meta charset="ISO-8859-1" />
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         
-        
-			<li><a href="pedidossinevaluar.php">Buscar pedidos sin evaluar</a></li>
-			<li><a href="pedidosevaluados.php">Buscar pedidos evaluados</a></li>
-            <li><a href="altacliente.php">Alta de cliente</a></li>
-            <li><a href="modificarcliente.php">Modificar cliente</a></li>
-            <li><a href="bajacliente.php">Baja de cliente</a></li>
-            <li><a href="busquedaparticular.php">Realizar búsqueda particular</a></li>
-            <li><a href="buscarinformesdiarios.php">Buscar informes diarios</a></li>
-            
-			<?php 
-			/*
-			$usuario=$_SESSION['usuario']; 
-			foreach($usuario as $k => $v){
-			if($v['tipo']=='adm')
-			{
-			*/
-			?>
-		<?php
-		/*
-		 }}}else{
-		*/	 
-		?>
+        <meta name="author" content="Frabis"/>
+        <meta name="Description" content="Descripcion"/>
 
-			<li><a href="login.html">Salir</a></li>
-            
-		<?php 
-		/*
+        <!-- En caso que tengas Favicon -->
+        <!-- <link href="favicon.ico" type="image/x-icon" rel="shortcut icon"/> -->
+        <!-- // -->
+
+		<title>..:: IRMIN ::..</title>
+				
+		<!-- Este Ionicons es una tipografia hecha de iconos muy utiles -->
+		<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" rev="stylesheet" type="text/css" href="estilos.css"  />
+		
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+		<!--
+		Este codigo de estilo hay que dejarlo como externo
+		-->
+		<style rel="stylesheet" rev="stylesheet" type="text/css">
+
+		/* Contenedor general del visor */
+		.contenedorvisor {
+		position: relative;
+		width: 500px;
+		height: 460px;
+		margin: 0 auto;
+		text-align:center;
+		overflow: hidden;
 		}
-		*/
-		?>
-		</ul>
-		</p>
-	</div>
-	
-  </div>  
-  
-  <div class="pie">
-	  <p class="parrafo">
-    <h3 class="textopie"> PIE DE PAGINA </h3>
-	</p>
-  </div>  
-</body>
+		.contenedorvisor a {
+		display: inline;
+		text-decoration: none;
+		top: 50px;
+		}
+		/* Estilo miniaturas */
+		.miniatura {
+		width: 18%; /* 100/nºimagenes, 5 en el ejemplo */
+		margin:1px;
+		border: 3px solid black;
+		opacity: 1;
+		}
+		/* Estilo imagen principal */
+		.grande {
+		width:100%;
+		position: absolute;
+		top: 800px; /* Valor mayor que alto contenedor para ocultar todas las imagenes */
+		margin:0 auto;
+		text-align: center;
+		display: block;
+		-webkit-transition: top 1s ease;
+		-moz-transition: top 1s ease;
+		-o-transition: top 1s ease;
+		-ms-transition: top 1s ease;
+		transition: top 1s ease;
+		}
+		/* Relleno inicial del espacio para imagen principal */
+		.muestra {
+		opacity: .3;
+		width: 200%;
+		top: 100px;
+		}
+		/* Marcamos con un borde la miniatura seleccionada */
+		a:hover .miniatura {
+		border: 3px solid grey;
+		opacity: .5;
+		}
+		/* Movemos con transicion la imagen seleccionada a la zona visible */
+		a:hover .grande {
+		top: 100px;
+		-webkit-transition: top 1s ease;
+		-moz-transition: top 1s ease;
+		-o-transition: top 1s ease;
+		-ms-transition: top 1s ease;
+		transition: top 1s ease;
+		z-index:3;
+		}
+
+
+
+		</style>
+
+
+	</head>
+	<body class="menu-activo">
+	<?php
+		// Como comentario, el session_start() tiene que ir SI o SI antes de cualquier etiqueta HTML de la pagina.
+  		// session_start();
+	?>
+		
+		<header>
+			<span><a href="#" class="gatillo"><i class="ion-drag"></i></a></span>
+			<h1>IRMIN</h1>
+		</header>
+
+		<div class="contenido cf">
+
+			<nav class="menu cf">
+				
+				<!-- <h2>Menu</h2> -->
+
+				<ul>
+					<li><a href="home.php">Inicio </a></li>
+					<li><a href="nuevopedido.php">Nuevo Pedido de revision</a></li>
+
+					<?php //if (! empty($_SESSION['usuario'])) { ?>
+
+					<li><a href="pedidossinevaluar.php">Buscar pedidos sin evaluar</a></li>
+					<li><a href="pedidosevaluados.php">Buscar pedidos evaluados</a></li>
+					<li><a href="altacliente.php">Alta de cliente</a></li>
+					<li><a href="modificarcliente.php">Modificar cliente</a></li>
+					<li><a href="bajacliente.php">Baja de cliente</a></li>
+					<li><a href="busquedaparticular.php">Realizar busqueda particular</a></li>
+					<li><a href="buscarinformesdiarios.php">Buscar informes diarios</a></li>
+
+					<!--<li><a href="catalogo1.php">Realizar Pedido!</a></li>-->
+					<?php 
+					
+					/*$usuario=$_SESSION['usuario']; 
+					foreach($usuario as $k => $v){
+					if($v['tipo']=='adm')
+					{*/
+					
+					?>
+					<?php
+					/*
+					}}}else{
+					*/	 
+					?>
+
+					<li><a href="login.html">Salir</a></li>
+
+					<?php //} ?>
+
+				</ul>
+			</nav>
+
+			<section class="cf">
+				<div class="principal">
+					<form name="mostrar" method="post" action="evaluarpedido.php">  
+						<fieldset id="imagenes">  
+							<legend>Pedidos sin evaluar</legend>   
+								<div class="contenedorvisor">
+									<a href="javascript:void(0);">
+										<img class="miniatura" src="imagenes/topes150128.1738.jpg" />
+										<img class="grande" src="imagenes/topes150128.1738.jpg" />
+									</a>
+									<a href="javascript:void(0);">
+										<img class="miniatura" src="imagenes/topes150128.1838.jpg" />
+										<img class="grande" src="imagenes/topes150128.1838.jpg" />
+									</a>
+									<a href="javascript:void(0);">
+										<img class="miniatura" src="imagenes/topes150128.1938.jpg" />
+										<img class="grande" src="imagenes/topes150128.1938.jpg" />
+									</a>
+									<!-- Se pueden agregar tantas como queramos
+									<a href="javascript:void(0);">
+										<img class="miniatura" src="URL_IMAGEN_MIN4" />
+										<img class="grande" src="URL_IMAGEN_ORIG4" />
+									</a>
+									<a href="javascript:void(0);">
+										<img class="miniatura" src="URL_IMAGEN_MIN5" />
+										<img class="grande" src="URL_IMAGEN_ORIG5" />
+									</a>
+									-->
+									<a href="javascript:void(0);">
+									<img class="grande muestra" src="/imagenes/topes150128.1738.jpg" />
+									</a>
+								</div>
+						</fieldset>
+						<td class="submit"></td><td><input type="submit" value="Evaluar" /></td>  
+					</form>
+				</div>
+
+			</section>
+
+			<footer>	
+				<p> Pie de pagina | <a href="mailto:info@irmin.com">info@irmin.com</a>  </p>
+			</footer>
+
+		</div>  
+		<script type="text/javascript" src="main.js"></script>
+	</body>
 </html>

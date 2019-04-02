@@ -5,7 +5,7 @@
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         
         <meta name="author" content="Frabis"/>
-        <meta name="Description" content="Descripción"/>
+        <meta name="Description" content="Descripcion"/>
 
         <!-- En caso que tengas Favicon -->
         <!-- <link href="favicon.ico" type="image/x-icon" rel="shortcut icon"/> -->
@@ -23,7 +23,7 @@
 	</head>
 	<body class="menu-activo">
 	<?php
-		// Como comentario, el session_start() tiene que ir SI o SI antes de cualquier etiqueta HTML de la página.
+		// Como comentario, el session_start() tiene que ir SI o SI antes de cualquier etiqueta HTML de la pagina.
   		// session_start();
 	?>
 		
@@ -36,11 +36,11 @@
 
 			<nav class="menu cf">
 				
-				<!-- <h2>Menú</h2> -->
+				<!-- <h2>Menu</h2> -->
 
 				<ul>
 					<li><a href="home.php">Inicio </a></li>
-					<li><a href="nuevopedido.php">Nuevo Pedido de revisión</a></li>
+					<li><a href="nuevopedido.php">Nuevo Pedido de revision</a></li>
 
 					<?php //if (! empty($_SESSION['usuario'])) { ?>
 
@@ -49,7 +49,7 @@
 					<li><a href="altacliente.php">Alta de cliente</a></li>
 					<li><a href="modificarcliente.php">Modificar cliente</a></li>
 					<li><a href="bajacliente.php">Baja de cliente</a></li>
-					<li><a href="busquedaparticular.php">Realizar búsqueda particular</a></li>
+					<li><a href="busquedaparticular.php">Realizar busqueda particular</a></li>
 					<li><a href="buscarinformesdiarios.php">Buscar informes diarios</a></li>
 
 					<!--<li><a href="catalogo1.php">Realizar Pedido!</a></li>-->
@@ -78,15 +78,15 @@
 				<div class="principal">
 					<form name="buscar" method="post"action="busquedainformesd.php">  
 							<fieldset id="pedidos">  
-								<legend>Informes de los últimos 7 días</legend>   
-								<a class="anegro" href="informe1.php">Día 28/01/2015 - Informe nº 12345</a><br><br>
-								<a class="anegro" href="resultado2.php">Día 29/01/2015 - Informe nº 12346</a><br><br>
-								<a class="anegro" href="resultado3.php">Día 30/01/2015 - Informe nº 12347</a><br><br>
-								<a class="anegro" href="resultado3.php">Día 31/01/2015 - Informe nº 12348</a><br><br>
-								<a class="anegro" href="resultado3.php">Día 01/02/2015 - Informe nº 12349</a><br><br>
-								<a class="anegro" href="resultado3.php">Día 02/02/2015 - Informe nº 12350</a><br><br>
-								<a class="anegro" href="resultado3.php">Día 03/02/2015 - Informe nº 12351</a><br><br>
-								<p> Para buscar informes en otra fecha, ingresla a continuación</p>
+								<legend>Informes de los ultimos 7 dias</legend>   
+								<a class="anegro" href="informe1.php">Dia 28/01/2015 - Informe nro 12345</a><br><br>
+								<a class="anegro" href="resultado2.php">Dia 29/01/2015 - Informe nro 12346</a><br><br>
+								<a class="anegro" href="resultado3.php">Dia 30/01/2015 - Informe nro 12347</a><br><br>
+								<a class="anegro" href="resultado3.php">Dia 31/01/2015 - Informe nro 12348</a><br><br>
+								<a class="anegro" href="resultado3.php">Dia 01/02/2015 - Informe nro 12349</a><br><br>
+								<a class="anegro" href="resultado3.php">Dia 02/02/2015 - Informe nro 12350</a><br><br>
+								<a class="anegro" href="resultado3.php">Dia 03/02/2015 - Informe nro 12351</a><br><br>
+								<p> Para buscar informes en otra fecha, ingresla a continuacion</p>
 								<label for="fecha">Fecha: </label></td><br><td><input name="fecha" type="text" id="fecha" size="30" /></td><br><br>
 								<td class="submit"></td><td><input type="submit" value="Buscar" /></td>
 							</fieldset>  
@@ -95,7 +95,7 @@
 			</section>
 
 			<footer>	
-				<p> Pie de página | <a href="mailto:info@irmin.com">info@irmin.com</a>  </p>
+				<p> Pie de pagina | <a href="mailto:info@irmin.com">info@irmin.com</a>  </p>
 			</footer>
 
 		</div>  

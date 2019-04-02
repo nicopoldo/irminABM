@@ -5,7 +5,7 @@
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         
         <meta name="author" content="Frabis"/>
-        <meta name="Description" content="Descripción"/>
+        <meta name="Description" content="Descripcion"/>
 
         <!-- En caso que tengas Favicon -->
         <!-- <link href="favicon.ico" type="image/x-icon" rel="shortcut icon"/> -->
@@ -23,7 +23,7 @@
 	</head>
 	<body class="menu-activo">
 	<?php
-		// Como comentario, el session_start() tiene que ir SI o SI antes de cualquier etiqueta HTML de la página.
+		// Como comentario, el session_start() tiene que ir SI o SI antes de cualquier etiqueta HTML de la pagina.
   		// session_start();
 	?>
 		
@@ -36,11 +36,11 @@
 
 			<nav class="menu cf">
 				
-				<!-- <h2>Menú</h2> -->
+				<!-- <h2>Menu</h2> -->
 
 				<ul>
 					<li><a href="home.php">Inicio </a></li>
-					<li><a href="nuevopedido.php">Nuevo Pedido de revisión</a></li>
+					<li><a href="nuevopedido.php">Nuevo Pedido de revision</a></li>
 
 					<?php //if (! empty($_SESSION['usuario'])) { ?>
 
@@ -49,7 +49,7 @@
 					<li><a href="altacliente.php">Alta de cliente</a></li>
 					<li><a href="modificarcliente.php">Modificar cliente</a></li>
 					<li><a href="bajacliente.php">Baja de cliente</a></li>
-					<li><a href="busquedaparticular.php">Realizar búsqueda particular</a></li>
+					<li><a href="busquedaparticular.php">Realizar busqueda particular</a></li>
 					<li><a href="buscarinformesdiarios.php">Buscar informes diarios</a></li>
 
 					<!--<li><a href="catalogo1.php">Realizar Pedido!</a></li>-->
@@ -78,10 +78,9 @@
 				<div class="principal">
 					<form name="buscar" method="post"action="resultados.php">  
 						<fieldset id="busqueda">  
-							<legend>Búsqueda particular</legend>   
+							<legend>Busqueda particular</legend>   
 								<label for="fechadesde">Fecha desde: </label></td><br><td><input name="fechadesde" type="text" id="fechadesde" size="30" /></td><br>
-								<label for="fechahasta">Fecha hasta: </label></td><br><td><input name="fechahasta" type="text" id="fechahasta" size="30" /></td>  
-								<br><label for="ubicacion">Ubicación: </label></td><br><td><input name="ubicacion" type="text" id="ubicacion" size="120" /></td><br><br>
+								<label for="fechahasta">Fecha hasta: </label></td><br><td><input name="fechahasta" type="text" id="fechahasta" size="30" /></td> <br><br> 
 								<td class="submit"></td><td><input type="submit" value="Buscar" /></td>
 						</fieldset>  
 					</form>
@@ -89,7 +88,7 @@
 			</section>
 
 			<footer>	
-				<p> Pie de página | <a href="mailto:info@irmin.com">info@irmin.com</a>  </p>
+				<p> Pie de pagina | <a href="mailto:info@irmin.com">info@irmin.com</a>  </p>
 			</footer>
 
 		</div>  
