@@ -1,0 +1,24 @@
+body{ background:#FFFFFF;
+	height:600px;
+	border:0px;
+	margin:0px;
+	padding:0px;
+}
+form{margin-top:30px;
+}
+.tabla{
+	text-align:center;
+	margin-left:36%;
+	background-color: #FFFFFF;
+}
+.imagenlogin{
+	width:800px;
+	height:400px;
+	margin-top:80px;
+	margin-left:21%;
+	border-color: #FFFFFF;
+	border: solid;
+}
+td{ border:thick;
+	border-color:#000000;
+}
